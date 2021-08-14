@@ -4,7 +4,7 @@ class Boid {
     this.velocity = createVector(random(-1, 1), random(-1, 1));
     this.position = createVector(x, y);
     this.r = 5.0;
-    this.maxspeed = 3; // Maximum speed
+    this.maxspeed = 5; // Maximum speed
     this.maxforce = 0.05; // Maximum steering force
   }
 
@@ -80,7 +80,7 @@ class Boid {
 
   // Method checks for nearby boids and steers away
   separate(boids) {
-    let desiredseparation = 25.0;
+    let desiredseparation = 30.0;
     let steer = createVector(0, 0);
     let count = 0;
     // For every boid in the system, check if it's too close
